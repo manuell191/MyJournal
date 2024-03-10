@@ -8,11 +8,11 @@ from .models import Profile, Post
 
 # Create your views here.
 def index(request):
-	return render(request, 'index.html')
+	return redirect('login')
 
 def userLogin(request):
 	if request.user.is_authenticated:
-		return redirect('home')
+		return redirect('post')
 
 	if request.method == 'POST':
 		form = LoginForm(request.POST)
@@ -34,7 +34,7 @@ def userLogin(request):
 
 def signup(request):
 	if request.user.is_authenticated:
-		return redirect('home')
+		return redirect('post')
 
 	if request.method == 'POST':
 		form = SignupForm(request.POST)
