@@ -1,0 +1,36 @@
+{% extends './base.html' %}
+
+{% load static %}
+
+{% block head %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static 'view.css' %}">
+{% endblock head %}
+
+{% block content %}
+<h1 id="title">My<span id="journal">Journal</span></h1>
+    <div class="outer-box">
+      <p>Your key words were: Anxiety, Lonely, and College</p>
+        <div class="inner-box">In the college haze, anxiety wraps around me like a suffocating fog. The crowded hallways amplify my isolation, a silent scream in a sea of unfamiliar faces. Loneliness settles heavy, drowning out laughter. Each day feels like a solo journey through a maze, where connection remains elusive, and my thoughts echo in solitude.</div>
+        <div class="arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="15 16 19 12 15 8"></polyline>
+            </svg>
+            <div class="text">6 months later</div>
+        </div>
+        <div class="inner-box-two">I've faced the fog head-on. Slowly, I found allies in unexpected places, turning crowded hallways into familiar paths. Loneliness began to dissipate, replaced by shared laughter. The maze felt less daunting, and the echo of my thoughts found resonance in newfound connections. The journey's tough, but growth is real.</div>
+        
+        <!-- Duplicate content below -->
+        
+        <div class="inner-box">College messes with my head. Anxiety's a constant tag-along, making classes a blur in a crowd. The dorm's too quiet, loneliness hanging around beneath fake smiles. Just trying to navigate through it all, hoping to find some genuine connections in the middle of this daily grind.</div>
+        <div class="arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="15 16 19 12 15 8"></polyline>
+            </svg>
+            <div class="text">6 months later</div>
+        </div>
+        <div class="inner-box-two">Alright, it's been half a year in this college gig. Anxiety's still there, but now it's more like a nagging buddy. Classes aren't a total haze anymore; I'm getting the hang of it. Loneliness takes a back seat to cracking jokes with my new crew. Navigating feels less like a maze, more like a stroll. Making strides, man.</div>
+    </div>
+{% endblock content %}

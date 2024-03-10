@@ -1,0 +1,13 @@
+{% extends "./base.html" %}
+
+{% load static %}
+
+{% block head %}
+<meta name="viewport" http-equiv="refresh" content="15;url={% url 'post' %}">
+<link rel="stylesheet" href="{% static 'load.css' %}">
+{% endblock head %}
+
+{% block content %}
+<div class="instruction">Take 15 seconds to breathe and recollect your thoughts for today</div>
+<div class="pulse"></div>
+{% endblock content %}

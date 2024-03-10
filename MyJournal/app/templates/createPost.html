@@ -1,0 +1,26 @@
+{% extends './base.html' %}
+
+{% load static %}
+
+{% block head %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static 'post.css' %}">
+{% endblock head %}
+
+{% block content %}
+<h1 id="title">My<span id="journal">Journal</span></h1>
+<div class="box box1">
+  <form action="" method="post" class="flex-column">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <input type="submit" value="Submit">
+  </form>
+</div>
+{% endblock content %}
